@@ -1,0 +1,32 @@
+package piscine
+
+func Abort(data, a, b, c, d, e int) int {
+	Len() int
+	Swap(i, j int)
+	Less(i, j int) bool
+	type Interface interface{ data }
+
+	if data.Less(a, e) {
+		data.Swap(a, e)
+	}
+	if data.Less(b, e) {
+		data.Swap(b, e)
+	}
+
+	if data.Less(c, e) {
+		data.Swap(c, e)
+	}
+	if data.Less(d, e) {
+		data.Swap(d, e)
+	}
+
+	return
+}
+
+func insertionSort(data Interface, a, b int) {
+	for i := a + 1; i < b; i++ {
+		for j := i; j > a && data.Less(j, j-1); j-- {
+			data.Swap(j, j-1)
+		}
+	}
+}

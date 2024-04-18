@@ -1,0 +1,1 @@
+curl https://zone01normandie.org/assets/superhero/all.json | jq -c ' .[] | select ( .id | contains ('$HERO_ID')) ' | jq '.connections' | jq '.relatives' | sed -e "s/\"//g"
